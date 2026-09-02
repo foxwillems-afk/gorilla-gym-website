@@ -123,7 +123,7 @@ a { color: inherit; text-decoration: none; }
   gap: 20px;
 }
 
-.brand-logo { height: 52px; width: auto; }
+.brand-logo { height: 72px; width: auto; }
 
 .main-nav {
   display: flex;
@@ -541,7 +541,7 @@ blockquote footer {
   gap: 20px;
 }
 
-.footer-logo { height: 44px; width: auto; }
+.footer-logo { height: 64px; width: auto; }
 
 .footer-info {
   display: flex;
@@ -562,6 +562,33 @@ blockquote footer {
   border-top: 1px solid var(--gray-border);
   padding-top: 20px;
 }
+
+/* ---------- Credit bar ---------- */
+.credit-bar {
+  background: #050505;
+  border-top: 1px solid var(--gray-border);
+  padding: 16px 0;
+}
+
+.credit-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.credit-bar-inner p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--white-dim);
+}
+
+.credit-bar-inner strong { color: var(--white); }
+
+.credit-logo { height: 18px; width: auto; opacity: 0.85; transition: opacity 0.15s ease; }
+
+.credit-bar-inner a:hover .credit-logo { opacity: 1; }
 
 /* ---------- WhatsApp floating button ---------- */
 .whatsapp-float {
