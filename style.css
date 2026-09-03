@@ -423,6 +423,24 @@ blockquote footer {
 
 .testimonial-content p { color: var(--white-dim); font-size: 1.02rem; }
 
+/* ---------- Locatie ---------- */
+.location-photo {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--gray-border);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.location-photo img { width: 100%; display: block; }
+
+.location-caption {
+  text-align: center;
+  color: var(--white-dim);
+  font-size: 0.95rem;
+  margin: 20px 0 0;
+}
+
 /* ---------- Champions ---------- */
 .champions-grid {
   display: grid;
