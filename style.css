@@ -531,6 +531,23 @@ blockquote footer {
 
 .champion-body h3 span { color: var(--yellow); }
 
+.champion-press {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  font-family: var(--font-cond);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--white-dim);
+  border-top: 1px solid var(--gray-border);
+  padding-top: 14px;
+}
+
+.champion-press svg { width: 16px; height: 16px; flex-shrink: 0; color: var(--yellow); }
+
+.champion-press:hover { color: var(--yellow); }
+
 /* ---------- Contact / CTA ---------- */
 .cta-section { text-align: center; }
 
