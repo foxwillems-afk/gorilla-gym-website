@@ -15,6 +15,30 @@ mainNav.querySelectorAll('a').forEach((link) => {
   });
 });
 
+/* ---------- Highlight today in the schedule + hero line ---------- */
+(function markToday() {
+  const today = document.querySelector('.roster-day[data-day="' + new Date().getDay() + '"]');
+  if (!today) return;
+  today.classList.add('is-today');
+
+  const slot = document.getElementById('hero-today');
+  if (!slot) return;
+
+  const classes = Array.from(today.querySelectorAll('.roster-item[data-class]')).map((item) => {
+    const time = item.querySelector('time').textContent;
+    const name = item.querySelector('.roster-name').textContent;
+    return time + ' ' + name;
+  });
+
+  const label = document.createElement('b');
+  label.textContent = 'Vandaag';
+  const text = document.createElement('span');
+  text.textContent = classes.length ? classes.join('  ·  ') : 'geen training';
+
+  slot.append(label, text);
+  slot.hidden = false;
+})();
+
 /* ---------- Showcase auto-scroll (for recording only) ----------
    Trigger by visiting the site with ?autoscroll in the URL, e.g.
    https://gorillagymalmelo.nl/?autoscroll
